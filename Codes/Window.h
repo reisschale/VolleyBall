@@ -3,23 +3,24 @@
 
 #include <SFML\Graphics.hpp>
 #include <Box2D\Box2D.h>
+#include <iostream>
 #include "Ball.h"
 #include "Player.h"
 
 class Window
 {
 public:
-	Window(int width, int length, std::string title, int frameLimit) 
-		: m_width(width), m_length(length), m_windowTitle(title),  m_Frame(frameLimit)
-	{
-		//m_window.sf::VideoMode((m_width, m_length), m_windowTitle);
-		//m_window.setFramerateLimit(frameLimit);
-		//m_window.setSize(sf::Vector2u(800 * 0.8, 600 * 0.8));
-	}
+	Window(int width, int length, std::string title, int frameLimit);
 
 	void setTexturePath(std::string texturePath) {
 		m_shape.loadFromFile(texturePath);
 	}
+
+
+	
+	void createTexture();
+
+	void closeWin();
 
 private:
 	sf::RenderWindow m_window;
@@ -29,8 +30,8 @@ private:
 	int m_length;
 	std::string m_windowTitle;
 	int m_Frame;
-
-
+	static int s_numInstances;
+	std::string s_currentName;
 
 };
 #endif // !WINDOW_H

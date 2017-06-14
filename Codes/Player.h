@@ -6,6 +6,8 @@
 class Player
 {
 public:
+
+	Player(){}
 	Player(int x_position, int y_position, bool side, std::string texturePath)
 		: m_x_Position(x_position), m_y_Position(y_position), m_side(side) , m_Points(0), m_texturePath(texturePath) {}
 
@@ -41,7 +43,7 @@ private:
 
 	int m_Points;
 
-	std::string m_texturePath
+	std::string m_texturePath;
 };
 
 
