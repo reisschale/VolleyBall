@@ -10,12 +10,17 @@
 class Window
 {
 public:
+
 	Window(int width, int length, std::string title, int frameLimit);
 
 	void setTexturePath(std::string texturePath) {
 		m_shape.loadFromFile(texturePath);
 	}
 
+	void draw()
+	{
+	
+	}
 
 	
 	void createTexture();
@@ -31,7 +36,7 @@ private:
 	std::string m_windowTitle;
 	int m_Frame;
 	static int s_numInstances;
-	std::string s_currentName;
+
 
 };
 #endif // !WINDOW_H

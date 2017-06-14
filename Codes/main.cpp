@@ -51,11 +51,11 @@ int main()
 
 
 	Window Fenster(800, 600, "Test Fenster", 60);
-	Player Spieler(5, 1, true, "images\blobby.png");
+	Player Spieler1(5, 1, true, "blobby.png");
+	Player Spieler2(5, 1, true, "blobby.png");
+	Player Spieler3(5, 1, true, "blobby.png");
+	Player Spieler4(5, 1, true, "blobby.png");
 
-
-
-	Fenster.createTexture();
 
 
 	Fenster.closeWin();
